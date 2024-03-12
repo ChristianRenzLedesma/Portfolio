@@ -2,9 +2,9 @@
     --primary-color: lightgreen;
     --primary-color-dark: green;
     --secondary-color: yellow;
-    --text-dark: gray;
+    --text-dark: black;
     --text-light: lightgray;
-    --extra--color: red;
+    --extra--color: darkviolet;
     --max-width: 1200px;
 }
 *{
