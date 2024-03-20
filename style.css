@@ -350,6 +350,32 @@ ul li a:hover {
     
 }
 
+@media (max-width: 365px) {
+    .title2{
+        margin-top: -540px;
+        text-align: center;
+    }
+
+    .row .right .content p{
+        left: -10px;
+        position: relative;
+        margin-top: 400px;
+        text-align: center;
+        font-size: 30px;
+        line-height: 30px; 
+        text-shadow: 1px 3px 3px gray;
+    }
+
+    .row .left img{
+        display: block;
+        margin: auto;
+        margin-top: 160px;
+        width: 90%;
+        border-radius: 100%;
+    }
+
+}
+
 /*--Contact--*/
 
 .contact{
