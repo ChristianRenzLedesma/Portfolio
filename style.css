@@ -73,7 +73,6 @@ nav input {
 }
 
 nav .checkbox i {
-    margin-left: -460px;
     font-size: 2rem;
     color: var(--primary-color);
     cursor: pointer;
