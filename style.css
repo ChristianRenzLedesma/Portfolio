@@ -139,9 +139,10 @@ ul li a:hover {
 
 .subtitle span {
     font-weight: 600;
-    color: blue;
+    color: lime;
     text-shadow: 1px 4px 15px rgb(60, 195, 145);
 }
+
 
 .action-btn {
     display: flex;
@@ -302,7 +303,6 @@ ul li a:hover {
     line-height: 30px; 
     text-shadow: 1px 3px 15px violet;
 }
-
 
 .content p span{
     text-shadow: 1px 3px 15px gray;
