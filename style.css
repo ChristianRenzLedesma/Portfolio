@@ -442,7 +442,14 @@ button:hover {
         margin-right: 0; 
     }
 }
+
 /*--Skills--*/
+
+.skills{
+    text-shadow: 1px 3px 4px gray;
+    color: greenyellow;
+}
+
 .skills1{
     text-shadow: 1px 3px 15px silver;
     font-size: 70px;
