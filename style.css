@@ -297,11 +297,12 @@ ul li a:hover {
     color: white;
     text-align: center;
     font-size: 30px;
-    left: 200px;
+    left: 60px;
     position: relative;
     line-height: 30px; 
     text-shadow: 1px 3px 15px violet;
 }
+
 
 .content p span{
     text-shadow: 1px 3px 15px gray;
