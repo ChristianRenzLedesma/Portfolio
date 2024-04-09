@@ -36,6 +36,7 @@ body {
 
 nav {
     width: 100%;
+    height: 15vh;
     top: 0;
     left: 0;
     background-color: white;
@@ -46,7 +47,7 @@ nav {
 .nav-content {
     max-width: var(--max-width);
     margin: auto;
-    padding: 1.5em 1rem;
+    padding: .7em 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,7 +61,7 @@ nav .logo a {
     transition: .3s;
 }
 
-nav .logo span{
+nav .logo span {
     color: #f33;
 }
 
@@ -73,6 +74,7 @@ nav input {
 }
 
 nav .checkbox i {
+    margin-left: -40px;
     font-size: 2rem;
     color: var(--primary-color);
     cursor: pointer;
@@ -87,6 +89,8 @@ ul {
 }
 
 ul li a {
+    top: 25px;
+    position: relative;
     padding: 0.5rem 1rem;
     border: 2px solid transparent;
     text-decoration: none;
@@ -95,10 +99,21 @@ ul li a {
     transition: 0.3s;
 }
 
-ul li a:hover {
-    border: 2px solid;
-    background-color: var(--secondary-color);
-    border-radius: 20px;
+ul li a::after {
+    content: '';
+    box-shadow: 1px 3px 14px gray;
+    width: 0%;
+    height: 3px;
+    background-color: lime;
+    top: -7px;
+    position: relative;
+    display: block;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+ul li a:hover::after {
+    width: 100%;
 }
 
 
@@ -161,7 +176,7 @@ ul li a:hover {
     cursor: pointer;
 }
 
-.button1 a{
+.button1 a {
     color: white;
 }
 
@@ -192,7 +207,7 @@ ul li a:hover {
     filter: grayscale(100%);
 }
 
-.image img:hover{
+.image img:hover {
     cursor: pointer;
     transform: scale(1.1);
     filter: grayscale(0%);
@@ -209,16 +224,24 @@ ul li a:hover {
         display: block;
     }
 
+    nav{
+        height: 10vh;
+    }
+
+    ul li {
+        display: block;
+    }
+
     ul {
         position: absolute;
         width: 100%;
         height: calc(100vh - 85px);
         left: -100%;
-        top: 85px;
+        top: 65px;
         background-color: var(--extra--color);
         flex-direction: column;
         justify-content: center;
-        gap: 3rem;
+        gap: 1rem;
     }
 
     nav #check:checked~ul {
@@ -239,7 +262,7 @@ ul li a:hover {
         grid-area: 1/1/2/2;
     }
 
-    .image img{
+    .image img {
         width: 70%;
     }
 
@@ -250,26 +273,26 @@ ul li a:hover {
 
 /*---About---*/
 
-#row{
+#row {
     width: 100%;
     min-height: 100vh;
     display: grid;
     place-items: center;
 }
 
-.row{
-   width: 80%;
-   max-width: 1170px;
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-gap: 50px 30px;    
+.row {
+    width: 80%;
+    max-width: 1170px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px 30px;
 }
 
-.row .left{
+.row .left {
     overflow: hidden;
 }
 
-.row .left img{
+.row .left img {
     margin: 4rem;
     box-shadow: 1px 3px 15px gray;
     width: 65%;
@@ -278,36 +301,36 @@ ul li a:hover {
     filter: grayscale(100%);
 }
 
-.row .left img:hover{
+.row .left img:hover {
     box-shadow: 1px 3px 15px blue;
     cursor: pointer;
     transform: scale(1.1);
     filter: grayscale(0%);
 }
 
-.row .right{
+.row .right {
     display: flex;
     align-items: center;
 }
 
-.row .right .content{
+.row .right .content {
     padding-left: 20px;
 }
 
-.row .right .content p{
+.row .right .content p {
     color: white;
     text-align: center;
     font-size: 30px;
     left: 60px;
     position: relative;
-    line-height: 30px; 
+    line-height: 30px;
     text-shadow: 1px 3px 15px violet;
 }
 
-.content p span{
+.content p span {
     text-shadow: 1px 3px 15px gray;
     color: #f33;
-} 
+}
 
 .title2 {
     text-shadow: 1px 3px 4px gray;
@@ -322,60 +345,284 @@ ul li a:hover {
 /*-- For Mobile --*/
 
 @media (max-width: 768px) {
-    .row{
+    .row {
         width: 80%;
-        grid-template-columns: 1fr; 
-     }   
+        grid-template-columns: 1fr;
+    }
 
-     .row .left{
+    .row .left {
         overflow: hidden;
     }
 
-     .row .left img{
+    .row .left img {
         display: block;
         margin: auto;
         width: 90%;
         border-radius: 100%;
     }
-    .row .right .content p{
+
+    .row .right .content p {
         margin-left: -20px;
         text-align: center;
         font-size: 20px;
         left: 0px;
         position: relative;
-        line-height: 25px; 
+        line-height: 25px;
         text-shadow: 1px 3px 3px gray;
     }
-    .title2{
+
+    .title2 {
         left: 0px;
         position: relative;
     }
 }
 
-/*--Contact--*/
+/*--Portfolio--*/
 
-.contact{
+.portfolio {
     width: 100%;
     height: 100vh;
-    background-color: #fff;
 }
 
-.message{
+.walanamaisipnaipapangalan {
+    text-align: center;
+    font-size: 67px;
+}
+
+.panggalan {
+    margin-top: -40px;
+    padding: 20px;
+}
+
+.panggalan a {
+    color: greenyellow;
+}
+
+.image1 {
+    width: 500px;
+    padding: 20px;
+}
+
+.panggalan a::after {
+    content: '';
+    box-shadow: 1px 3px 14px gray;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(0, 251, 255);
+    top: -2px;
+    position: relative;
+    display: block;
+    transition: 0.3s;
+}
+
+.panggalan a:hover::after {
+    width: 36%;
+}
+
+.panggalan .code:hover::after {
+    width: 27%;
+}
+
+.panggalan2 a {
+    color: greenyellow;
+}
+
+.panggalan2 a::after {
+    content: '';
+    box-shadow: 1px 3px 14px gray;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(0, 251, 255);
+    top: -2px;
+    position: relative;
+    display: block;
+    transition: 0.3s;
+}
+
+.panggalan2 a:hover::after {
+    width: 46%;
+}
+
+
+.panggalan2 .code2:hover::after {
+    width: 41%;
+}
+
+.im {
+    position: relative;
+    display: flex;
+}
+
+.panggalan3{
+    color: greenyellow;
+}
+
+.panggalan3 a::after {
+    content: '';
+    box-shadow: 1px 3px 14px gray;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(0, 251, 255);
+    top: -2px;
+    position: relative;
+    display: block;
+    transition: 0.3s;
+}
+
+.panggalan3 a:hover::after {
+    width: 28%;
+}
+
+.images-row2{
+    top: 20px;
+    position: relative;
+}
+
+.images-row2 img{
+    width: 220px;
+    padding: 0;
+}
+
+.images-row3{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.images-row3 img{
+    width: 300px;
+    height: 200px;
+}
+
+.images-row3 a{
+    color: greenyellow;
+}
+
+.images-row1 img{
+    width: 340px;
+    padding: 20px;
+}
+
+@media(max-width:  768px) {
+    .images-row3 img{
+        width: 200px;
+    }
+
+    .images-row3{
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .images-row1{
+       padding: 30px;
+    }
+
+    .code{
+        float: right;
+        left: 40px;
+        top: -30px;
+        position: relative;
+    }
+
+    .code2{
+        float: right;
+        left: 1px;
+        top: -30px;
+        position: relative;
+    }
+
+    .code3{
+        float: right;
+        left: 1px;
+        top: -30px;
+        position: relative;
+    }
+
+    .images-row1 img{
+        width: 200px;
+        padding: 0;
+    }
+
+    .portfolio {
+        width: 100%;
+        height: 150vh;
+    }
+
+    .panggalan{
+        padding: 40px;
+        margin-left: -40px;
+    }
+
+    .images-row2{
+        top: 200px;
+        left: -230px;
+        position: relative; 
+    }
+
+    .images-row2 img{
+        width: 200px;
+    }
+
+    .panggalan3 a{
+        color: greenyellow;
+    }
+
+    .panggalan a:hover::after{
+        width: 69%;
+    }
+
+    .panggalan .code:hover::after{
+        width: 100%;
+    }
+ 
+    .panggalan2 a:hover::after{
+        width: 46%;
+    }
+
+    .panggalan2 .code2:hover::after{
+        width: 100%;
+    }
+
+    .panggalan3 .code3:hover::after{
+        width: 100%;
+    }
+
+    .panggalan3 a:hover::after{
+        width: 40%;
+    }
+
+    .images-row3{
+        top: 400px;
+        left: -430px;
+        position: relative;
+    }
+}
+
+
+
+/*--Contact--*/
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    background-color: burlywood;
+}
+
+.message {
     font-size: 36px;
     padding-top: 200px;
     margin-bottom: 1rem;
     text-align: center;
 }
 
-.subtitle2{
+.subtitle2 {
     text-align: center;
 }
 
-form{
+form {
     margin-top: 20px;
 }
 
-.links{
+.links {
     text-shadow: 1px 3px 15px silver;
     font-size: 70px;
     display: flex;
@@ -385,28 +632,28 @@ form{
     margin-left: 20px;
 }
 
-.links a{
+.links a {
     color: black;
     transition: 1s;
 }
 
-.links a:hover{
+.links a:hover {
     transform: scale(1.5);
 }
 
-.fb{
+.fb {
     line-height: 1rem;
     text-align: center;
     font-size: 20px;
 }
 
-.git{
+.git {
     line-height: 1rem;
     text-align: center;
     font-size: 20px;
 }
 
-.tik{
+.tik {
     line-height: 1rem;
     text-align: center;
     font-size: 20px;
@@ -424,7 +671,8 @@ textarea {
     border-radius: 4px;
 }
 
-button, .but{
+button,
+.but {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -439,7 +687,9 @@ button, .but{
 button:hover {
     background-color: var(--primary-color-dark);
 }
+
 @media only screen and (min-width: 600px) {
+
     input[type="text"],
     input[type="email"],
     select,
@@ -450,18 +700,24 @@ button:hover {
     }
 
     select {
-        margin-right: 0; 
+        margin-right: 0;
+    }
+
+    .contact {
+        width: 100%;
+        height: 100vh;
+        background-color: burlywood;
     }
 }
 
 /*--Skills--*/
 
-.skills{
+.skills {
     text-shadow: 1px 3px 4px gray;
     color: greenyellow;
 }
 
-.skills1{
+.skills1 {
     text-shadow: 1px 3px 15px silver;
     font-size: 70px;
     align-items: center;
@@ -470,26 +726,26 @@ button:hover {
     margin-left: 20px;
 }
 
-.skills1 img{
+.skills1 img {
     margin: auto;
     padding: 1rem 1rem;
     transition: .5s;
 }
 
-.skills1 img:hover{
-   transform: scale(1.3);
+.skills1 img:hover {
+    transform: scale(1.3);
 }
 
-.html{
+.html {
     margin-top: -1.5rem;
     padding: 1rem;
     color: orange;
     line-height: 1rem;
-    font-size: 20px;   
+    font-size: 20px;
     top: 20px;
 }
 
-.css{
+.css {
     margin-top: -1.5rem;
     padding: 1rem;
     line-height: 1rem;
@@ -497,6 +753,6 @@ button:hover {
     top: 20px;
 }
 
-.text h1{
+.text h1 {
     text-align: center;
 }
